@@ -1,0 +1,69 @@
+// 引入公共布局
+@import '../public/layout.less';
+
+
+
+footer {
+    .footer(3);
+}
+
+.main {
+    background-color: #f8f8f8;
+    min-height      : 100vh;
+    overflow        : hidden;
+
+    .shop_list {
+        margin          : .4rem auto;
+        background-color: white;
+        border-radius   : 5px;
+
+        li {
+            padding      : .1rem;
+            border-bottom: 1px solid #e9ebec;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            img {
+                width: 20%;
+            }
+
+            .cont {
+                display       : inline-block;
+                vertical-align: top;
+                margin-left   : .2rem;
+
+                h2 {
+                    color      : @themeColor;
+                    font-size  : .22rem;
+                    line-height: .4rem;
+                }
+
+                em {
+                    font-size: .2rem;
+
+                    span {
+                        font-size: .16rem;
+                    }
+
+                    &::after {
+                        position   : relative;
+                        display    : block;
+                        width      : .4rem;
+                        margin-left: 0;
+                        margin-top : .06rem;
+                    }
+                }
+            }
+
+            i {
+                float       : right;
+                margin-top  : .48rem;
+                margin-right: .2rem;
+                font-size   : .3rem;
+                color       : #999;
+            }
+        }
+    }
+}

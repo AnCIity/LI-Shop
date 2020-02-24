@@ -1,0 +1,461 @@
+/*
+    side
+*/
+.side {
+  width: 7.2rem;
+  margin: 0 auto;
+  background: white;
+  overflow: hidden;
+}
+/*
+    wrap
+*/
+.wrap {
+  width: 6.8rem;
+  margin: 0 auto;
+}
+/*
+    将块的宽度拉直站点布局最宽
+*/
+.pullWidth {
+  width: 7.2rem !important;
+  margin-left: calc((100% - 7.2rem)/2);
+}
+/*
+    轮播选项
+*/
+.optionDot {
+  position: relative;
+}
+.optionDot nav {
+  position: absolute;
+  width: 100%;
+  bottom: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.optionDot nav a {
+  margin: 0.1rem;
+}
+.optionDot nav a:hover i {
+  background: transparent;
+  border: 1px solid white;
+}
+.optionDot nav i {
+  display: inline-block;
+  width: 0.1rem;
+  height: 0.1rem;
+  background: white;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+/*
+    图标引用
+*/
+.iconNva {
+  position: relative;
+}
+.iconNva span {
+  position: absolute;
+  bottom: -0.08rem;
+  left: 0.2rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  transform: scale(0.8);
+  background: #fc5459;
+  border-radius: 50%;
+  font-size: 0.12rem;
+  font-weight: normal;
+  color: white;
+}
+/*
+    顶部
+*/
+.header {
+  border-bottom: 1px solid #f1f1f2;
+}
+.header > div {
+  height: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header > div h1 {
+  font-weight: bold;
+  font-size: 0.24rem;
+  color: #333;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.header > div a {
+  color: #999;
+}
+.header > div a:focus {
+  color: #fc5459;
+}
+.header > div a i {
+  font-size: 0.2rem;
+}
+/*
+    底部公共类
+*/
+/*
+    价格
+*/
+.detailPrice em {
+  position: relative;
+  font-size: 0.24rem;
+  line-height: 0.3rem;
+}
+.detailPrice em span {
+  display: inline-block;
+  text-decoration: line-through;
+  font-size: 0.2rem;
+  color: #999;
+  margin-left: 0.24rem;
+}
+.detailPrice em::after {
+  content: '40%';
+  position: absolute;
+  display: inline-block;
+  background-color: #0bf3bf;
+  color: white;
+  font-size: 0.12rem;
+  text-align: center;
+  padding: 0 0.12rem;
+  margin-left: 0.2rem;
+}
+/*
+    底部点击按钮
+*/
+.shop_btn {
+  height: 0.7rem;
+  line-height: 0.7rem;
+  background-color: #fc5459;
+  border-radius: 0.4rem;
+  text-align: center;
+  box-shadow: 0 0 0.3rem rgba(252, 84, 89, 0.6);
+  display: block;
+  color: white;
+  font-size: 0.18rem;
+  letter-spacing: 0.06rem;
+}
+/*
+    卡片列表
+    ------
+     <ul class="card_list">
+        <li>
+            <div class="left">
+                <i class="an an-youhui-"></i>
+                <strong>Apple Coupon</strong>
+            </div>
+            <div class="right">
+                <i class="an an-youjiantou"></i>
+            </div>
+        </li>
+    </ul>
+*/
+.card_list {
+  margin: 0.3rem auto;
+  background-color: white;
+  border: 1px solid #f1f2f3;
+  border-radius: 5px;
+}
+.card_list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.2rem;
+  line-height: 0.6rem;
+  border-bottom: 1px solid #ecedee;
+}
+.card_list li .left i {
+  display: inline-block;
+  margin-right: 0.2rem;
+  color: #fc5459;
+  font-size: 0.3rem;
+  vertical-align: middle;
+}
+.card_list li .left strong {
+  font-size: 0.16rem;
+  vertical-align: middle;
+}
+.card_list li .left span {
+  color: #999;
+}
+.card_list li .right i {
+  font-size: 0.16rem;
+  font-weight: bold;
+}
+.card_list li .right b {
+  color: #333;
+  font-size: 0.14rem;
+}
+.card_list li .right strong {
+  font-weight: bold;
+}
+.card_list li .right .sale {
+  color: #31f5c9;
+}
+.card_list li .right .free {
+  color: #fc5459;
+}
+.card_list li:last-child {
+  border-bottom: none;
+}
+/*
+    details show_card
+*/
+.show_card {
+  position: relative;
+  background-color: white;
+  width: 70%;
+  margin: 0.1rem auto 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.3);
+}
+.show_card img {
+  width: 100%;
+}
+.show_card .card_info {
+  padding: 0.2rem;
+  position: relative;
+}
+.show_card .card_info h3 {
+  color: #fc5459;
+  font-size: 0.18rem;
+  font-weight: normal;
+  line-height: 0.3rem;
+}
+.show_card .card_info em {
+  position: relative;
+  font-size: 0.24rem;
+  line-height: 0.3rem;
+}
+.show_card .card_info em span {
+  display: inline-block;
+  text-decoration: line-through;
+  font-size: 0.2rem;
+  color: #999;
+  margin-left: 0.24rem;
+}
+.show_card .card_info em::after {
+  content: '40%';
+  position: absolute;
+  display: inline-block;
+  background-color: #0bf3bf;
+  color: white;
+  font-size: 0.12rem;
+  text-align: center;
+  padding: 0 0.12rem;
+  margin-left: 0.2rem;
+}
+.show_card .card_info em {
+  font-size: 0.18rem;
+}
+.show_card .card_info em span {
+  font-size: 0.15rem;
+}
+.show_card .card_info em::after {
+  line-height: 0.24rem;
+  margin-top: 0.03rem;
+  border-radius: 5px;
+}
+.show_card .card_info a {
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  margin-top: -0.12rem;
+  font-weight: bold;
+  color: #999;
+}
+.show_card .card_info a i {
+  font-size: 0.24rem;
+}
+.show_card .close {
+  position: absolute;
+  top: -0.2rem;
+  right: -0.2rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background-color: #b6c0c9;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 0.34rem;
+}
+/*
+    option color
+    ------
+    <ul class="option_color">
+        <li><i tabindex="0"></i></li>
+        <li><i tabindex="0"></i></li>
+        <li><i tabindex="0"></i></li>
+        <li><i tabindex="0"></i></li>
+    </ul>
+*/
+.option_color {
+  display: flex;
+  justify-content: center;
+}
+.option_color li {
+  margin: 0 0.1rem;
+}
+.option_color li i {
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #1664c4;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  padding: 0.05rem;
+  background-clip: content-box;
+  outline: none;
+}
+.option_color li i:focus {
+  border-color: #fc5459;
+}
+.option_color li:nth-child(2) i {
+  background-color: #0bf3bf;
+}
+.option_color li:nth-child(3) i {
+  background-color: #fc5459;
+}
+.option_color li:nth-child(4) i {
+  background-color: yellow;
+}
+/*
+    option_size
+    ------
+    <ul class="option_size">
+        <li>
+            <i tabindex="0">S</i>
+        </li>
+        <li>
+            <i tabindex="0">M</i>
+        </li>
+        <li>
+            <i tabindex="0">L</i>
+        </li>
+        <li>
+            <i tabindex="0">XL</i>
+        </li>
+    </ul>
+*/
+.option_size li {
+  display: inline-block;
+  margin: 0.25rem 0.1rem;
+}
+.option_size li i {
+  display: inline-block;
+  border: 1.5px solid #999;
+  border-radius: 50%;
+  width: 0.55rem;
+  height: 0.55rem;
+  line-height: calc(0.55rem + 3px);
+  text-align: center;
+  color: #999;
+  font-weight: bold;
+  outline: none;
+}
+.option_size li i:focus {
+  color: #fc5459;
+  border-color: #fc5459;
+}
+footer .popup {
+  border-top: 1px solid #dcdee1;
+  width: 7.2rem;
+  position: fixed;
+  left: calc((100% - 7.2rem)/2);
+  bottom: 0;
+  background-color: white;
+}
+footer .popup nav {
+  display: flex;
+}
+footer .popup nav a {
+  position: relative;
+  width: 25%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+}
+footer .popup nav a:nth-child(5) {
+  color: #fc5459;
+}
+footer .popup nav a i {
+  font-size: 0.4rem;
+  position: relative;
+}
+footer .popup nav a i span {
+  position: absolute;
+  bottom: -0.08rem;
+  left: 0.2rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  transform: scale(0.8);
+  background: #fc5459;
+  border-radius: 50%;
+  font-size: 0.12rem;
+  font-weight: normal;
+  color: white;
+}
+footer .perch {
+  height: 0.8rem;
+}
+.head {
+  height: 30vh;
+  background-color: #9c797a;
+}
+.main {
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+.main .info {
+  text-align: center;
+  margin-top: -1rem;
+}
+.main .info img {
+  width: 2rem;
+}
+.main .info h2 {
+  color: #fc5459;
+  font-weight: bold;
+  font-size: 0.2rem;
+  margin: 0.3rem 0 0.14rem;
+}
+.main .info p {
+  color: #999;
+  font-size: 0.2rem;
+  margin: 0 0 0.2rem;
+}
+.main .info div {
+  color: #444;
+}
+.main .card_list {
+  margin: 0.5rem 0 1rem;
+}
+.main .card_list li {
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 0.2rem;
+  cursor: pointer;
+}
+.main .card_list li .left i {
+  font-size: 0.45rem;
+}
+.main .card_list li .left strong {
+  font-size: 0.22rem;
+  color: #333;
+}
+.main .card_list li .right i {
+  margin-left: 0.2rem;
+}
+.main .card_list li .right .red {
+  color: red;
+  font-size: 0.14rem;
+}

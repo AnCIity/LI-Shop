@@ -1,0 +1,95 @@
+@import '../public/common.less';
+
+/*
+    side
+*/
+.side {
+    width     : @sideWidth;
+    margin    : 0 auto;
+    background: white;
+    overflow  : hidden;
+}
+
+/*
+    wrap
+*/
+.wrap {
+    width      : @wrapWidth;
+    margin     : 0 auto;
+    text-align : center;
+    padding-top: .6rem;
+}
+
+.shop_btn {
+    height          : .7rem;
+    line-height     : .7rem;
+    background-color: @themeColor;
+    border-radius   : .4rem;
+    text-align      : center;
+    box-shadow      : 0 0 .3rem rgba(252, 84, 89, .6);
+    display         : block;
+    color           : white;
+    font-size       : .18rem;
+    letter-spacing  : .06rem;
+}
+
+.main {
+    min-height: 100vh;
+
+    h1 {
+        color      : @themeColor;
+        font-weight: bold;
+        font-size  : .3rem;
+    }
+
+    .order_num {
+        color      : #999;
+        line-height: .3rem;
+        font-size  : .19rem;
+        margin     : .1rem 0;
+
+        span {
+            color      : #444;
+            font-weight: bold;
+            font-size  : .2rem;
+
+        }
+    }
+
+    img {
+        margin     : .4rem 0 .6rem;
+        user-select: none;
+    }
+
+    .date_title {
+        font-weight: bold;
+        font-size  : .22rem;
+        line-height: .5rem;
+    }
+
+    .date {
+        line-height: .4rem;
+        color      : #666;
+        font-size  : .2rem;
+    }
+
+    .view {
+        width         : 90%;
+        margin        : 1rem auto .5rem;
+        // padding-top: .1rem;
+    }
+
+    .cont {
+        width      : 90%;
+        margin     : 0 auto;
+        padding-top: .1rem;
+
+        .shop_btn {
+            background-color: white;
+            color           : #666;
+            font-weight     : bold;
+            box-shadow      : 0 0 .3rem rgba(0, 0, 0, .2);
+        }
+    }
+
+}

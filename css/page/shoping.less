@@ -1,0 +1,54 @@
+// 引入公共布局
+@import '../public/layout.less';
+
+
+.header {
+
+    .wrap {
+        h1 {
+            font-size: .16rem;
+
+            span {
+                display    : block;
+                text-align : center;
+                color      : #999;
+                font-size  : .14rem;
+                line-height: .25rem;
+            }
+        }
+    }
+
+}
+
+
+.main {
+    background-color: #fdfdfd;
+    overflow        : hidden;
+
+    .card_list {
+        width: 80%;
+    }
+
+    &>h2 {
+        font-size  : .18rem;
+        text-align : center;
+        line-height: .3rem;
+        margin     : .2rem 0;
+
+        span {
+            color: @themeColor;
+        }
+    }
+
+    .pay {
+        width : 70%;
+        margin: .8rem auto .4rem;
+    }
+
+}
+
+
+
+footer {
+    .footer(4);
+}

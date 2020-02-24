@@ -1,0 +1,468 @@
+// 引入公共变量
+@import '../public/common.less';
+
+/*
+    side
+*/
+.side {
+    width     : @sideWidth;
+    margin    : 0 auto;
+    background: white;
+    overflow  : hidden;
+}
+
+/*
+    wrap
+*/
+.wrap {
+    width : @wrapWidth;
+    margin: 0 auto;
+}
+
+/*
+    将块的宽度拉直站点布局最宽
+*/
+.pullWidth {
+    width      : @sideWidth  !important;
+    margin-left: @sideToWrap;
+}
+
+/*
+    轮播选项
+*/
+.optionDot {
+    position: relative;
+
+    nav {
+        position       : absolute;
+        width          : 100%;
+        bottom         : .1rem;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+
+        a {
+            margin: .1rem;
+
+            &:hover i {
+                background: transparent;
+                border    : 1px solid white;
+            }
+        }
+
+        i {
+            display      : inline-block;
+            width        : .1rem;
+            height       : .1rem;
+            background   : white;
+            border       : 1px solid transparent;
+            border-radius: 50%;
+        }
+    }
+}
+
+/*
+    图标引用
+*/
+.iconNva {
+    position: relative;
+
+    span {
+        position     : absolute;
+        bottom       : -.08rem;
+        left         : .2rem;
+        width        : .3rem;
+        height       : .3rem;
+        line-height  : .3rem;
+        text-align   : center;
+        transform    : scale(.8);
+        background   : @themeColor;
+        border-radius: 50%;
+        font-size    : .12rem;
+        font-weight  : normal;
+        color        : white;
+    }
+
+}
+
+/*
+    顶部
+*/
+.header {
+    border-bottom: 1px solid #f1f1f2;
+
+    &>div {
+        height         : .8rem;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+
+        h1 {
+            font-weight: bold;
+            font-size  : .24rem;
+            color      : #333;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        a {
+            color: #999;
+
+            &:focus {
+                color: @themeColor;
+            }
+
+            i {
+                font-size: .2rem;
+            }
+
+        }
+    }
+
+}
+
+/*
+    底部公共类
+*/
+.footer(@num) {
+
+    .popup {
+        border-top      : 1px solid #dcdee1;
+        width           : @sideWidth;
+        position        : fixed;
+        left            : @sideToWrap;
+        bottom          : 0;
+        background-color: white;
+
+        nav {
+
+            display: flex;
+
+            a {
+                position   : relative;
+                width      : 25%;
+                height     : .8rem;
+                line-height: .8rem;
+                text-align : center;
+
+                &:nth-child(@{num}) {
+                    color: @themeColor;
+                }
+
+                i {
+                    font-size: .4rem;
+                    position : relative;
+                    .iconNva;
+                }
+            }
+        }
+    }
+
+    .perch {
+        height: .8rem;
+    }
+
+}
+
+
+/*
+    价格
+*/
+.detailPrice {
+    em {
+        position   : relative;
+        font-size  : .24rem;
+        line-height: .3rem;
+
+        span {
+            display        : inline-block;
+            text-decoration: line-through;
+            font-size      : .20rem;
+            color          : #999;
+            margin-left    : .24rem;
+        }
+
+        &::after {
+            content         : '40%';
+            position        : absolute;
+            display         : inline-block;
+            background-color: #0bf3bf;
+            color           : white;
+            font-size       : .12rem;
+            text-align      : center;
+            padding         : 0 .12rem;
+            margin-left     : .2rem;
+        }
+    }
+}
+
+/*
+    底部点击按钮
+*/
+.shop_btn {
+    height          : .7rem;
+    line-height     : .7rem;
+    background-color: @themeColor;
+    border-radius   : .4rem;
+    text-align      : center;
+    box-shadow      : 0 0 .3rem rgba(252, 84, 89, .6);
+    display         : block;
+    color           : white;
+    font-size       : .18rem;
+    letter-spacing  : .06rem;
+}
+
+/*
+    卡片列表
+    ------
+     <ul class="card_list">
+        <li>
+            <div class="left">
+                <i class="an an-youhui-"></i>
+                <strong>Apple Coupon</strong>
+            </div>
+            <div class="right">
+                <i class="an an-youjiantou"></i>
+            </div>
+        </li>
+    </ul>
+*/
+
+.card_list {
+    margin          : .3rem auto;
+    background-color: white;
+    border          : 1px solid #f1f2f3;
+    border-radius   : 5px;
+
+    li {
+        display        : flex;
+        justify-content: space-between;
+        padding        : 0 .2rem;
+        line-height    : .6rem;
+        border-bottom  : 1px solid #ecedee;
+
+        .left {
+
+            i {
+                display       : inline-block;
+                margin-right  : .2rem;
+                color         : @themeColor;
+                font-size     : .3rem;
+                vertical-align: middle;
+            }
+
+            strong {
+                font-size     : .16rem;
+                vertical-align: middle;
+            }
+
+            span {
+                color: #999;
+            }
+
+        }
+
+        .right {
+
+            i {
+                font-size  : .16rem;
+                font-weight: bold;
+            }
+
+            b {
+                color    : #333;
+                font-size: .14rem;
+            }
+
+            strong {
+                font-weight: bold;
+            }
+
+            .sale {
+                color: #31f5c9;
+            }
+
+            .free {
+                color: @themeColor;
+            }
+
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+
+/*
+    details show_card
+*/
+.show_card {
+    position        : relative;
+    background-color: white;
+    width           : 70%;
+    margin          : .1rem auto .5rem;
+    border-radius   : 5px;
+    box-shadow      : 0 0 .3rem rgba(0, 0, 0, .3);
+
+    img {
+        width: 100%;
+    }
+
+    .card_info {
+        padding : .2rem;
+        position: relative;
+
+        h3 {
+            color      : @themeColor;
+            font-size  : .18rem;
+            font-weight: normal;
+            line-height: .3rem;
+        }
+
+        .detailPrice;
+
+        em {
+            font-size: .18rem;
+
+            span {
+                font-size: .15rem;
+            }
+
+            &::after {
+                line-height  : .24rem;
+                margin-top   : .03rem;
+                border-radius: 5px;
+            }
+        }
+
+        a {
+            position   : absolute;
+            right      : .2rem;
+            top        : 50%;
+            margin-top : -.12rem;
+            font-weight: bold;
+            color      : #999;
+
+            i {
+                font-size: .24rem;
+            }
+        }
+
+    }
+
+    .close {
+        position        : absolute;
+        top             : -.2rem;
+        right           : -.2rem;
+        width           : .4rem;
+        height          : .4rem;
+        line-height     : .4rem;
+        background-color: #b6c0c9;
+        border-radius   : 50%;
+        text-align      : center;
+        color           : white;
+        font-size       : .34rem;
+    }
+
+}
+
+
+/*
+    option color
+    ------
+    <ul class="option_color">
+        <li><i tabindex="0"></i></li>
+        <li><i tabindex="0"></i></li>
+        <li><i tabindex="0"></i></li>
+        <li><i tabindex="0"></i></li>
+    </ul>
+*/
+
+.option_color {
+    display        : flex;
+    justify-content: center;
+
+    li {
+        margin: 0 .1rem;
+
+        i {
+            display         : inline-block;
+            width           : .4rem;
+            height          : .4rem;
+            background-color: #1664c4;
+            border-radius   : 50%;
+            border          : 1px solid transparent;
+            padding         : .05rem;
+            background-clip : content-box;
+            outline         : none;
+
+            &:focus {
+                border-color: @themeColor;
+            }
+        }
+
+        &:nth-child(2) {
+            i {
+                background-color: #0bf3bf;
+            }
+        }
+
+        &:nth-child(3) {
+            i {
+                background-color: @themeColor;
+            }
+        }
+
+        &:nth-child(4) {
+            i {
+                background-color: yellow;
+            }
+        }
+
+    }
+}
+
+/*
+    option_size
+    ------
+    <ul class="option_size">
+        <li>
+            <i tabindex="0">S</i>
+        </li>
+        <li>
+            <i tabindex="0">M</i>
+        </li>
+        <li>
+            <i tabindex="0">L</i>
+        </li>
+        <li>
+            <i tabindex="0">XL</i>
+        </li>
+    </ul>
+*/
+
+.option_size {
+    li {
+        display: inline-block;
+        margin : .25rem .1rem;
+
+        i {
+            display      : inline-block;
+            border       : 1.5px solid #999;
+            border-radius: 50%;
+            width        : .55rem;
+            height       : .55rem;
+            line-height  : calc(.55rem + 3px);
+            text-align   : center;
+            color        : #999;
+            font-weight  : bold;
+            outline      : none;
+
+            &:focus {
+                color       : @themeColor;
+                border-color: @themeColor;
+            }
+        }
+    }
+}

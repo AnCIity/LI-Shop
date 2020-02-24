@@ -1,0 +1,65 @@
+// 引入公共布局
+@import '../public/layout.less';
+
+
+.header {
+    .wrap {
+        h1 {
+            font-size: .16rem;
+        }
+
+        a {
+            i[class^=an] {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.main {
+    background-color: #fdfdfd;
+
+    .form {
+        padding-top    : .3rem;
+        display        : flex;
+        justify-content: space-between;
+        flex-wrap      : wrap;
+    }
+
+    .form_addr {
+        width    : 100%;
+        font-size: .16rem;
+        margin   : .2rem 0;
+
+        p {
+            color : #999;
+            height: .2rem;
+        }
+
+        input {
+            width           : 100%;
+            line-height     : .5rem;
+            font-size       : .16rem;
+            font-weight     : bold;
+            outline         : none;
+            border-bottom   : 1px solid #dcdee0;
+            background-color: transparent;
+        }
+
+
+    }
+
+    .half {
+        width: 48%;
+    }
+
+    .save_addr {
+        width : 80%;
+        margin: 1.5rem auto 1rem;
+    }
+}
+
+
+footer {
+    .footer(4);
+}

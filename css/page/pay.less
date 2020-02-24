@@ -1,0 +1,126 @@
+// 引入公共布局
+@import '../public/layout.less';
+
+.header {
+    .wrap {
+        h1 {
+            font-size: .16rem;
+        }
+
+        a {
+            i[class^=an] {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.main {
+    background-color: #f8f8f8;
+    overflow        : hidden;
+    min-height      : 100vh;
+
+    h1 {
+        font-weight: 500;
+        font-size  : .24rem;
+        color      : #333;
+        text-align : center;
+        margin     : .4rem 0;
+
+        span {
+            color      : @themeColor;
+            font-weight: bold;
+        }
+    }
+
+    .card_list {
+        li {
+            height     : 1rem;
+            line-height: 1rem;
+
+            .left {
+                i {
+                    font-size: .4rem;
+                }
+
+                strong {
+                    font-size: .22rem;
+                    color    : #404752;
+                }
+            }
+        }
+    }
+
+    .addr_new {
+        display         : block;
+        padding         : 0 0.2rem;
+        height          : 1rem;
+        line-height     : 1rem;
+        margin          : 0.3rem auto;
+        background-color: white;
+        border          : 1px solid #f1f2f3;
+        border-radius   : 5px;
+
+        i {
+            display       : inline-block;
+            margin-right  : 0.2rem;
+            font-size     : .5rem;
+            color         : @themeColor;
+            vertical-align: middle
+        }
+
+        em {
+            color         : @themeColor;
+            font-size     : .24rem;
+            vertical-align: middle
+        }
+
+    }
+
+    .adders {
+        position        : relative;
+        padding         : .2rem 0.2rem;
+        margin          : 0.3rem auto;
+        background-color: white;
+        border          : 1px solid #f1f2f3;
+        border-radius   : 5px;
+        display         : flex;
+        justify-content : space-between;
+
+        .left {
+            width: 70%;
+
+            h3 {
+                line-height  : .3rem;
+                font-size    : .2rem;
+                font-weight  : bold;
+                color        : #444;
+                margin-bottom: .05rem;
+            }
+
+            p {
+                color      : #999;
+                line-height: .3rem;
+            }
+        }
+
+        .right {
+            i {
+                font-size: .3rem;
+                position : absolute;
+                right    : .4rem;
+                bottom   : .4rem;
+            }
+        }
+    }
+
+    .pay_now {
+        width : 70%;
+        margin: 1.5rem auto .4rem;
+    }
+}
+
+
+footer {
+    .footer(4);
+}

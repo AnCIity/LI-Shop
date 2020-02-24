@@ -1,0 +1,58 @@
+// 引入公共布局
+@import '../public/layout.less';
+
+.header {
+    .wrap {
+        h1 {
+            font-size: .16rem;
+        }
+
+        a {
+            i {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.main {
+    background-color: #f8f8f8;
+    overflow        : hidden;
+    padding         : 0 .6rem;
+
+    .show_card {
+        width : 50%;
+        margin: .6rem auto;
+    }
+
+    .option {
+        .option_item {
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+            height         : .8rem;
+            margin         : .2rem 0;
+
+            p {
+                font-size: .14rem;
+                color    : #333;
+            }
+
+            ul {
+                width          : 70%;
+                display        : flex;
+                justify-content: center;
+            }
+        }
+    }
+
+    .save {
+        width : 70%;
+        margin: .6rem auto .4rem;
+    }
+}
+
+
+footer {
+    .footer(4);
+}
